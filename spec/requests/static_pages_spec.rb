@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "StaticPages" do
+describe "Static pages" do
 
   describe "Home page" do
 
@@ -16,7 +16,7 @@ describe "StaticPages" do
   
     it "should not have a custom page title" do
       visit '/static_pages/home'
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App")
+      expect(page).not_to have_title('| Home')
     end
   end
 
@@ -34,7 +34,7 @@ describe "StaticPages" do
 
     it "should not have the custom page title" do
       visit '/static_pages/help'
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App")
+      expect(page).not_to have_title('| Help')
     end
   end
 
@@ -52,7 +52,7 @@ describe "StaticPages" do
 
     it "should not have the custom page title" do
       visit '/static_pages/about'
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App")
+      expect(page).not_to have_title('| About Us')
     end
   end
 
@@ -70,7 +70,7 @@ describe "StaticPages" do
   
     it "should not have the custom page title" do
       visit '/static_pages/contact'
-      expect(page).to have_title("Rubt on Rails Tutorial Sample App")
+      expect(page).not_to have_title('| Contact Us')
     end
   end
 end
