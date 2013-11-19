@@ -70,7 +70,7 @@ describe "Static pages" do
   
     it "should not have the custom page title" do
       visit '/static_pages/contact'
-      expect(page).not_to have_title('| Contact Us')
+      expect(page).not_to have_title('| Contact')
     end
   end
 end
